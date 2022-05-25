@@ -78,13 +78,8 @@ public class BD {
 		String rsString="";
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver"); 
-			Connection con = DriverManager.getConnection(dbUrl(),user,password);
-			Statement  stmt = con.createStatement();
-			String sql;
-			sql = "show databases";
-			ResultSet rs = stmt.executeQuery(sql);
-			rsString=ResultSetToJSON(rs);
-			stmt.close();
+			DriverManager.getConnection(dbUrl(),user,password);
+			rsString=SucessToJSON();
 		} catch (Exception ex) {
 			String error=errorToJSON(ex);
 			System.out.println("Log: "+error);
