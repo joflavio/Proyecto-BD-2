@@ -13,6 +13,7 @@ import java.util.stream.IntStream;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -73,6 +74,7 @@ public class BD {
 		return "{\"Status\" : \"Sucessfull\", \"ResultSet\":"+ ResultSetToJSON(resultSet) +"}";
 	}
 	
+	@CrossOrigin
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String login(@RequestParam  String user, @RequestParam  String password) {
 		String rsString="";
@@ -89,6 +91,7 @@ public class BD {
 		return rsString;
 	}
 	
+	@CrossOrigin
 	@RequestMapping(value="/execute", method=RequestMethod.POST)
 	public String execute(@RequestParam  String user, @RequestParam  String password, String sql) {
 		String rsString="";
