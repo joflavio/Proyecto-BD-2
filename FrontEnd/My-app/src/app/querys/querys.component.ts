@@ -10,6 +10,7 @@ export class QuerysComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log ("Hola Mundo")
   }
 
 }
