@@ -17,12 +17,15 @@ export class LoginComponent implements OnInit {
       password: 'p9ai5bOGQGIckKRnRqA1',
       sql: 'SHOW DATABASES;'
     };
-  }
-  ngOnInit(): void {
+
     this.querysService.obtenerBd(this.query).subscribe(data => {
       console.log(data)
     }
     );
   }
+  ngOnInit(): void {
+    
+  }
 
 }
+3135079610

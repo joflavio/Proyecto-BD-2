@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import { QuerysComponent } from './querys/querys.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,9 +20,10 @@ import { QuerysComponent } from './querys/querys.component';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
