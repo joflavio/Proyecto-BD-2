@@ -12,7 +12,7 @@ export class QuerysService {
     
 }
   obtenerBd(query:QueryInterface){
-    return this.http.post('localhost:8090/login',query);
+    return this.http.post('http://localhost:8090/login',query);
   }
 
   
